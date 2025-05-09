@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+u<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -30,10 +30,8 @@
             <li><a href="" class="nav-link">Portfolio</a></li>
             <li><a href="" class="nav-link">Contacts</a></li>
           </ul>
-          <!-- Кнопка мобільного меню -->
-          <button></button>
         </nav>
-
+      
         <address class="address">
           <ul class="address-list">
             <li>
@@ -48,6 +46,41 @@
             </li>
           </ul>
         </address>
+
+        <!-- Кнопка мобільного меню -->
+          <button
+            type="button"
+            class="mobile-menu-button"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+          >
+            <svg class="mobile-menu-icon" width="24" height="24">
+              <use href="./images/icons.svg#icon-heroicons-solid_menu"></use>
+            </svg>
+
+            <!-- Десктопне меню (приховається на мобільних) -->
+            <ul class="nav-list">
+              <li>
+                <a href="./index.html" class="nav-link current">Studio</a>
+              </li>
+              <li><a href="" class="nav-link">Portfolio</a></li>
+              <li><a href="" class="nav-link">Contacts</a></li>
+            </ul>
+          </button>
+        <!-- Мобільне меню (спочатку приховане) -->
+    <div class="mobile-menu" id="mobile-menu">
+      <ul class="mobile-nav-list">
+        <li><a href="./index.html" class="mobile-nav-link current">Studio</a></li>
+        <li><a href="" class="mobile-nav-link">Portfolio</a></li>
+        <li><a href="" class="mobile-nav-link">Contacts</a></li>
+      </ul>
+
+        <ul class="mobile-socials">
+          <li><a href="#" class="mobile-socials-link">Instagram</a></li>
+          <li><a href="#" class="mobile-socials-link">Twitter</a></li>
+          <li><a href="#" class="mobile-socials-link">Facebook</a></li>
+          <li><a href="#" class="mobile-socials-link">LinkedIn</a></li>
+        </ul>
       </div>
     </header>
 
