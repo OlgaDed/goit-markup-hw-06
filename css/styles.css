@@ -168,11 +168,28 @@ body {
   transition: opacity 0.3s, visibility 0.3s;
 }
 
-/* When the menu is open */
+/* Closed menu */
+.menu-toggle ~ .mobile-menu {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* Open menu */
 .menu-toggle:checked ~ .mobile-menu {
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
+}
+
+/* Close button (✕) */
+.mobile-menu-close {
+  display: block;
+  text-align: right;
+  font-size: 32px;
+  padding: 24px;
+  cursor: pointer;
 }
 
 /* List of links in the mobile menu */
