@@ -549,7 +549,7 @@ body {
 /* our team section */
 .team {
   background-color: #f4f4fd;
-  padding: 120px 0;
+  padding: 96px 0;
 }
 
 /* section title */
@@ -580,7 +580,9 @@ body {
 
 .team-item {
   background-color: #ffffff;
-  width: calc((100% - 72px) / 4);
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
   border-bottom-right-radius: 4px;
@@ -645,25 +647,31 @@ body {
 }
 
 @media (min-width: 768px) {
+  .team {
+    padding: 96px 0;
+  }
   .team-list {
     flex-direction: row;
     flex-wrap: wrap;
     gap: 24px;
+    justify-content: center;
   }
 
   .team-item {
-    width: calc((100% - 24px) / 2); /* 2 в рядок */
-  }
-
-  .team-card {
-    margin-left: auto;
-    margin-right: auto;
+    width: calc((100% - 24px) / 2); /* 2 per line */
+    justify-content: center;
   }
 }
 
 @media (min-width: 1158px) {
+  .team {
+    padding: 120px 0;
+  }
+
   .team-item {
-    width: calc((100% - 72px) / 4); /* 4 в рядок */
+    width: calc((100% - 72px) / 4); /* 4 per line */
+    margin: 0;
+    justify-content: center;
   }
 }
 
