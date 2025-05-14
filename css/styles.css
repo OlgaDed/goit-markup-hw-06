@@ -482,7 +482,7 @@ body {
   line-height: 1.2; /* 120% */
   letter-spacing: 0.02em;
   color: #2e2f42;
-  text-align: left;
+  text-align: center;
   margin-bottom: 8px;
 }
 
@@ -492,6 +492,7 @@ body {
   line-height: 1.5; /* 150% */
   letter-spacing: 0.02em;
   color: #434455;
+  text-align: left;
 }
 
 .features-icon-box {
@@ -522,6 +523,11 @@ body {
   .features-item {
     width: calc((100% - 24px) / 2); /* 2 в рядок */
   }
+
+  /* h3 headers */
+  .features-title {
+    text-align: left;
+  }
 }
 
 /* deskstop */
@@ -532,6 +538,11 @@ body {
 
   .features-list {
     justify-content: space-between;
+  }
+
+  /* h3 headers */
+  .features-title {
+    text-align: left;
   }
 }
 
