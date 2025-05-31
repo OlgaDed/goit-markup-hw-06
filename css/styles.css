@@ -1,17 +1,17 @@
 /* fonts */
 .raleway {
-  font-family: "Raleway", sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-optical-sizing: auto;
   font-weight: 700;
   font-style: normal;
 }
 
 .roboto {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
-  font-variation-settings: "wdth" 100;
+  font-variation-settings: 'wdth' 100;
 }
 
 input {
@@ -49,7 +49,7 @@ img {
 
 /* page body */
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   color: #434455;
   background-color: #ffffff;
 }
@@ -81,7 +81,7 @@ body {
 
 /* logo */
 .header .logo {
-  font-family: "Raleway", sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-weight: 700;
   font-size: 18px;
   line-height: 1.17;
@@ -117,7 +117,7 @@ body {
 }
 
 .nav-link.current::after {
-  content: "";
+  content: '';
   position: absolute;
   left: 0;
   bottom: -1px;
@@ -231,7 +231,7 @@ body {
   text-decoration: none;
 }
 
-.mobile-address-link[href^="tel:"] {
+.mobile-address-link[href^='tel:'] {
   font-size: 24px;
   font-weight: 500;
   color: #4d5ae5;
@@ -385,7 +385,7 @@ body {
 /* button */
 .order-button {
   background-color: #4d5ae5;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
@@ -814,16 +814,18 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 72;
+  gap: 72px;
+  text-align: center;
 }
 
 .footer-logo-text {
   margin-right: 120px;
+  text-align: center;
 }
 
 /* logo */
 .footer .logo {
-  font-family: "Raleway", sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-weight: 700;
   font-size: 18px;
   line-height: 1.17;
@@ -849,6 +851,11 @@ body {
 }
 
 /* Styles for the footer social media header */
+
+.footer-socials {
+  text-align: center;
+}
+
 .footer-socials-title {
   font-weight: 500;
   font-size: 16px;
@@ -899,7 +906,7 @@ body {
   margin-left: auto;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
 }
 
 .footer-form-title {
@@ -913,9 +920,9 @@ body {
 
 .footer-form-mail {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
-  gap: 24px;
+  gap: 16px;
   border: none;
   max-width: 100%;
 }
@@ -995,10 +1002,12 @@ body {
   .footer-socials,
   .footer-form {
     width: calc((100% - 48px) / 2);
+    text-align: left;
   }
 
   .footer-form-mail {
     flex-direction: row;
+    align-items: center;
     gap: 24px;
   }
 
@@ -1035,7 +1044,7 @@ body {
   display: block;
   min-width: 169px;
   height: 56px;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 16px;
   font-weight: 500;
   line-height: 1.5;
@@ -1277,7 +1286,7 @@ body {
   align-self: center;
   min-width: 169px;
   height: 56px;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 16px;
   font-weight: 500;
   line-height: 1.5;
