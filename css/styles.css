@@ -819,11 +819,11 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 72px;
-  text-align: center;
 }
 
-.footer-logo-text {
-  margin-right: 0;
+.footer-logo-text,
+.footer-socials,
+.footer-form {
   text-align: center;
 }
 
@@ -855,11 +855,6 @@ body {
 }
 
 /* Styles for the footer social media header */
-
-.footer-socials {
-  text-align: center;
-}
-
 .footer-socials-title {
   font-weight: 500;
   font-size: 16px;
@@ -910,7 +905,6 @@ body {
   margin-right: 0;
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 
 .footer-form-title {
@@ -1009,6 +1003,10 @@ body {
     text-align: left;
   }
 
+  .footer-form-title {
+    text-align: left;
+  }
+
   .footer-form-mail {
     flex-direction: row;
     align-items: center;
@@ -1034,11 +1032,11 @@ body {
   .footer-socials,
   .footer-form {
     width: auto;
-    margin-right: 80px;
+    text-align: left;
   }
 
-  .footer-form {
-    margin-right: 0;
+  .footer-form-title {
+    text-align: left;
   }
 }
 
