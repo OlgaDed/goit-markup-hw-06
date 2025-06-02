@@ -42,9 +42,23 @@ img {
 }
 
 .container {
-  max-width: 1158px;
+  max-width: 320px;
   margin: 0 auto;
-  padding: 0 15px 0 15px;
+  padding: 0 16px;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+    padding: 0 16px;
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .container {
+    max-width: 1158px;
+    padding: 0 15px;
+  }
 }
 
 /* page body */
@@ -75,8 +89,7 @@ body {
 
 .nav-list,
 .address-list {
-  display: flex;
-  gap: 40px;
+  display: none;
 }
 
 /* logo */
@@ -147,7 +160,7 @@ body {
 
 /* Burger button (hidden on desktop) */
 .mobile-menu-button {
-  display: none;
+  display: block;
   cursor: pointer;
   background: transparent;
   border: none;
@@ -199,7 +212,7 @@ body {
   flex-direction: column;
   gap: 40px;
   margin-top: 72px;
-  margin-bottom: 40px;
+  margin-bottom: 168px;
   padding: 0;
   list-style: none;
 }
@@ -240,25 +253,11 @@ body {
 /* Social networks in the mobile menu */
 .mobile-socials {
   display: flex;
-  gap: 24px;
-  padding: 0;
-  list-style: none;
-}
-
-.mobile-socials-link {
-  color: #4d5ae5;
-  text-decoration: none;
-}
-
-/* Social icons */
-.mobile-socials {
-  display: flex;
-  justify-content: center;
+  justify-content: space-between;
   gap: 24px;
   margin-top: 8px;
   padding: 0;
   list-style: none;
-  margin-top: 8px;
 }
 
 .mobile-socials-item {
@@ -286,23 +285,18 @@ body {
   fill: #f4f4fd;
 }
 
-/* Base styles --- mobile first */
-@media screen and (max-width: 767px) {
-  .nav-list,
-  .address {
-    display: none;
-  }
-
-  .mobile-menu-button {
-    display: block;
-  }
-}
-
-/* Tablet ≥768px */
+/* Tablet */
 @media screen and (min-width: 768px) {
+  .header {
+    padding: 16px 32px;
+  }
+
   .nav-list,
-  .address {
+  .address-list {
     display: flex;
+  }
+  .nav-list {
+    gap: 40px;
   }
 
   .mobile-menu-button {
@@ -311,11 +305,6 @@ body {
 
   .mobile-menu {
     display: none;
-  }
-
-  .header .container {
-    padding-left: 16px;
-    padding-right: 16px;
   }
 
   .address-list {
@@ -330,11 +319,8 @@ body {
 
 /* Desktop ≥1158px */
 @media screen and (min-width: 1158px) {
-  .header .container {
-    max-width: 1158px;
-    margin: 0 auto;
-    padding-left: 15px;
-    padding-right: 15px;
+  .header {
+    padding-right: 24px 156px;
   }
 
   .address-list {
@@ -350,7 +336,7 @@ body {
 /* hero section */
 .hero {
   background-color: #2e2f42;
-  padding: 72px 0;
+  padding: 72px 52px;
   background-image: linear-gradient(
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
@@ -380,6 +366,7 @@ body {
   letter-spacing: 0.02em;
   color: #ffffff;
   max-width: 100%;
+  margin-bottom: 72px;
 }
 
 /* button */
@@ -406,16 +393,16 @@ body {
   background-color: #404bbf;
 }
 
-/* ---------- Tablet ---------- */
-@media screen and (max-width: 768px) {
+/* tablet */
+@media screen and (min-width: 768px) {
   .hero {
-    padding: 112px 0;
+    padding: 112px 120px;
   }
 
   .hero-title {
-    font-size: 40px;
-    line-height: 1.1;
-    max-width: 100%;
+    font-size: 56px;
+    line-height: 1.07;
+    margin-bottom: 36px;
   }
 
   .order-button {
@@ -423,20 +410,25 @@ body {
   }
 }
 
-/* ---------- Mobile ---------- */
-@media screen and (max-width: 480px) {
+/* desktop */
+@media screen and (min-width: 1158px) {
   .hero {
-    padding: 96px 0;
+    padding: 188px 316px;
   }
 
   .hero-title {
-    font-size: 32px;
+    margin-bottom: 36px;
   }
+}
 
-  .order-button {
-    width: 100%;
-    max-width: 280px;
-    height: 52px;
+/* Retina */
+@media (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/people-office1\ 2x.jpg);
   }
 }
 
@@ -803,12 +795,6 @@ body {
 }
 
 /* page footer */
-.container {
-  max-width: 1158px;
-  margin: 0 auto;
-  padding: 0 15px 0 15px;
-}
-
 .footer {
   background-color: #2e2f42;
   padding: 100px 0;
@@ -824,6 +810,8 @@ body {
 .footer-logo-text,
 .footer-socials,
 .footer-form {
+  width: auto;
+  max-width: 100%;
   text-align: center;
 }
 
@@ -994,6 +982,7 @@ body {
     align-items: flex-start;
     text-align: left;
     gap: 24px;
+    margin-left: 108px;
   }
 
   .footer-logo-text,
@@ -1024,8 +1013,12 @@ body {
 
 @media (min-width: 1158px) {
   .footer-container {
+    max-width: 1158px;
+    margin: 0 auto;
     flex-wrap: nowrap;
     gap: 0;
+    padding: 0 15px;
+    box-sizing: border-box;
   }
 
   .footer-logo-text,
