@@ -2,7 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css"
@@ -31,6 +34,7 @@
             <li><a href="" class="nav-link">Contacts</a></li>
           </ul>
         </nav>
+
         <address class="address">
           <ul class="address-list">
             <li>
@@ -45,19 +49,35 @@
             </li>
           </ul>
         </address>
-        <!-- Чекбокс для контролю меню -->
-        <input type="checkbox" id="menu-toggle" class="menu-toggle" />
-        <!-- Кнопка відкриття меню -->
-        <label for="menu-toggle" class="mobile-menu-button">
-          <svg class="mobile-menu-icon" width="24" height="24">
+
+        <!-- кнопка для контролю бургер-меню -->
+        <button
+          type="button"
+          class="burger-button"
+          aria-label="Open menu"
+          onclick="document.getElementById('mobile-menu').classList.add('menu-open')"
+        >
+          <svg class="burger-icon" width="24" height="24">
             <use href="./images/icons.svg#icon-heroicons-solid_menu"></use>
           </svg>
-        </label>
+        </button>
+      </div>
+    </header>
 
-        <!-- Мобільне меню -->
-        <div class="mobile-menu">
-          <!-- Кнопка закриття -->
-          <label for="menu-toggle" class="mobile-menu-close">✕</label>
+    <!-- мобільне меню -->
+    <div class="mobile-menu" id="mobile-menu">
+      <div class="mobile-menu-content">
+        <button
+          type="button"
+          class="mobile-menu-close"
+          onclick="document.getElementById('mobile-menu').classList.remove('menu-open')"
+        >
+          <svg class="close-icon" width="24" height="24">
+            <use href="./images/icons.svg#icon-Vector-close"></use>
+          </svg>
+        </button>
+
+        <nav class="mobile-nav">
           <ul class="mobile-nav-list">
             <li>
               <a href="./index.html" class="mobile-nav-link current">Studio</a>
@@ -65,54 +85,64 @@
             <li><a href="" class="mobile-nav-link">Portfolio</a></li>
             <li><a href="" class="mobile-nav-link">Contacts</a></li>
           </ul>
-          <ul class="mobile-address-list">
-            <li>
-              <a href="mailto:info@devstudio.com" class="mobile-address-link"
-                >info@devstudio.com</a
-              >
-            </li>
-            <li>
-              <a href="tel:+110001111111" class="mobile-address-link"
-                >+11 (000) 111-11-11</a
-              >
-            </li>
-          </ul>
-          <ul class="mobile-socials">
-            <li class="mobile-socials-item">
-              <a href="#" class="mobile-socials-link">
-                <svg class="mobile-socials-icon" width="16" height="16">
-                  <use href="./images/icons.svg#icon-instagram-2"></use>
-                </svg>
-              </a>
-            </li>
+        </nav>
 
-            <li class="mobile-socials-item">
-              <a href="#" class="mobile-socials-link">
-                <svg class="mobile-socials-icon" width="16" height="16">
-                  <use href="./images/icons.svg#icon-twitter-1"></use>
-                </svg>
-              </a>
-            </li>
+        <div class="mobile-contacts">
+          <address class="mobile-address">
+            <ul class="mobile-address-list">
+              <li>
+                <a
+                  href="mailto:info@devstudio.com"
+                  class="mobile-address-link current2"
+                  >info@devstudio.com</a
+                >
+              </li>
+              <li>
+                <a href="tel:+110001111111" class="mobile-address-link"
+                  >+11 (000) 111-11-11</a
+                >
+              </li>
+            </ul>
+          </address>
 
-            <li class="mobile-socials-item">
-              <a href="#" class="mobile-socials-link">
-                <svg class="mobile-socials-icon" width="16" height="16">
-                  <use href="./images/icons.svg#icon-facebook-1"></use>
-                </svg>
-              </a>
-            </li>
+          <div class="mobile-socials-container">
+            <ul class="mobile-socials">
+              <li class="mobile-socials-item">
+                <a href="#" class="mobile-socials-link">
+                  <svg class="mobile-socials-icon" width="16" height="16">
+                    <use href="./images/icons.svg#icon-instagram-2"></use>
+                  </svg>
+                </a>
+              </li>
 
-            <li class="mobile-socials-item">
-              <a href="#" class="mobile-socials-link">
-                <svg class="mobile-socials-icon" width="16" height="16">
-                  <use href="./images/icons.svg#icon-linkedin-1"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
+              <li class="mobile-socials-item">
+                <a href="#" class="mobile-socials-link">
+                  <svg class="mobile-socials-icon" width="16" height="16">
+                    <use href="./images/icons.svg#icon-twitter-1"></use>
+                  </svg>
+                </a>
+              </li>
+
+              <li class="mobile-socials-item">
+                <a href="#" class="mobile-socials-link">
+                  <svg class="mobile-socials-icon" width="16" height="16">
+                    <use href="./images/icons.svg#icon-facebook-1"></use>
+                  </svg>
+                </a>
+              </li>
+
+              <li class="mobile-socials-item">
+                <a href="#" class="mobile-socials-link">
+                  <svg class="mobile-socials-icon" width="16" height="16">
+                    <use href="./images/icons.svg#icon-linkedin-1"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
-    </header>
+    </div>
 
     <!-- Унікальний контент сторінки -->
     <main>
@@ -396,7 +426,7 @@
 
       <!-- Our Portfolio-->
       <section class="portfolio">
-        <div class="container">
+        <div class="container portfolio-container">
           <h2 class="portfolio-title">Our Portfolio</h2>
           <ul class="portfolio-list">
             <li class="portfolio-item">
@@ -623,7 +653,7 @@
           onclick="document.getElementById('backdrop').classList.remove('is-open')"
         >
           <svg class="modal-close-icon" width="8" height="8">
-            <use href="./images/icons.svg#close-icon"></use>
+            <use href="./images/icons.svg#icon-Vector-close"></use>
           </svg>
         </button>
 
@@ -641,7 +671,7 @@
                 required
               />
               <svg class="modal-form-icon" width="18" height="24">
-                <use href="./images/icons.svg#icon-person-black-18dp-1"></use>
+                <use href="./images/icons.svg#icon-person-black-18dp-2"></use>
               </svg>
             </div>
           </div>
