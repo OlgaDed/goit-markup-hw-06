@@ -60,15 +60,12 @@ body {
 @media screen and (min-width: 768px) {
   .container {
     max-width: 768px;
-    margin: 0 auto;
-    padding: 0 15px;
   }
 }
 
 @media screen and (min-width: 1158px) {
   .container {
-    max-width: 1158px;
-    margin: 0 auto;
+    max-width: 1440px;
     padding: 0 15px;
   }
 }
@@ -270,7 +267,7 @@ body {
 
 .mobile-socials {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 40px;
   list-style: none;
   padding: 0;
@@ -848,6 +845,10 @@ body {
 
 .portfolio-content {
   padding: 32px 16px;
+  border-bottom: 1px solid #e7e9fc;
+  border-left: 1px solid #e7e9fc;
+  border-right: 1px solid #e7e9fc;
+  box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08);
 }
 
 .portfolio-item-title {
@@ -871,6 +872,7 @@ body {
     flex-direction: row;
     flex-wrap: wrap;
     gap: 24px;
+    row-gap: 72px;
   }
 
   .portfolio-item {
@@ -882,6 +884,14 @@ body {
   .portfolio {
     padding: 120px 0;
   }
+
+  .portfolio-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 24px;
+    row-gap: 48px;
+  }
+
   .portfolio-item {
     width: calc((100% - 48px) / 3);
   }
@@ -932,7 +942,7 @@ body {
   color: #f4f4fd;
   letter-spacing: 0.02em;
   max-width: 264px;
-  margin-bottom: 16px;
+  text-align: left;
 }
 
 /* Styles for the footer social media header */
@@ -1011,7 +1021,7 @@ body {
   border: 1px solid #fff;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
-  width: 264px;
+  width: 288px;
   height: 40px;
   color: #ffffff;
   padding-left: 16px;
@@ -1074,7 +1084,8 @@ body {
     align-items: flex-start;
     text-align: left;
     gap: 24px;
-    margin-left: 108px;
+    row-gap: 72px;
+    padding-left: 108px;
   }
 
   .footer-logo-text,
